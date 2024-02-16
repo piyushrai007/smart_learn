@@ -503,24 +503,36 @@ section.why-us {
 #tabs ul {
   margin: 0;
   padding: 0;
-  -webkit-column-count: 3;
+  /* Remove column count and column gap */
+  /* -webkit-column-count: 3;
   -moz-column-count: 3;
   column-count: 3;
   -webkit-column-gap: 0;
   -moz-column-gap: 0;
-  column-gap: 0;
+  column-gap: 0; */
+  /* Add flexbox properties */
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
 }
 #tabs ul::after {
-  clear: both;
+  /* Remove clear and display properties */
+  /* clear: both;
   content: "";
-  display: table;
+  display: table; */
 }
 #tabs ul li {
-  display: block;
+  /* Change display to inline-block */
+  /* display: inline-block; */
   font-weight: 400;
   font-size: 1.2em;
   letter-spacing: 1px;
   text-align: center;
+  /* Add width to adjust spacing */
+  /* width: 33.33%; / / Adjust as needed */
+  /* Add padding to create space between tabs */
+  /* padding: 0 10px; / / Adjust as needed */
+  /* Add flex property to adjust width */
+  flex: 1;
 }
 #tabs ul li a {
   display: block;
