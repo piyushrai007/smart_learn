@@ -147,6 +147,33 @@ a.menu-link { display: none; }
     }
   }
 }
+.carousel-container {
+  border-radius: 20px; /* Adjust the curve radius as needed */
+  overflow: hidden; /* Ensure images stay within curved container */
+  box-shadow: 0 0 20px rgba(255, 165, 37, 0.5); /* Add glowing effect */
+}
+
+.carousel-container .carousel-inner {
+  border-radius: 20px; /* Adjust the curve radius as needed */
+}
+
+.carousel-container img {
+  border-radius: 20px; /* Adjust the curve radius as needed */
+}
+
+/* Optionally, you can add animation to the glowing effect */
+@keyframes glow {
+  0% {
+      box-shadow: 0 0 20px rgba(255, 165, 37, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 40px rgba(255, 165, 37, 0.5); /* Adjust glowing effect */
+  }
+}
+
+.carousel-container:hover {
+  animation: glow 1s infinite alternate; /* Add animation */
+}
 
 /* Header */
 
@@ -1457,66 +1484,78 @@ img.mfp-img {
 }
 
 
-
 /* Contact */
 
 section.contact {
-    background-image: url(../images/contact-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: #172238;
-    padding-bottom: 120px;
+  background-image: url(../images/contact-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #172238;
+  padding-bottom: 120px;
 }
 
 
 section.contact form {
-    background-color: rgba(250,250,250,0.1);
-    padding: 30px;
-    width: 100%;
+  background-color: rgba(250,250,250,0.1);
+  padding: 30px;
+  width: 100%;
+  border-radius: 20px; /* Adjust the curve radius as needed */
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Add initial glowing effect */
+  animation: pulse 2s infinite alternate; /* Add animation */
+}
+
+@keyframes pulse {
+  0% {
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  100% {
+      box-shadow: 0 0 40px rgba(255, 165, 37, 0.5); /* Adjust glowing effect on animation */
+  }
 }
 
 
 @media screen and (max-width: 767px) {  
-  section.contact form {
-      margin-bottom: 30px;
-  }
-}
-
-section.contact form input {
-    width: 100%;
-    height: 40px;
-    background-color: rgba(250,250,250,0.1);
-    border-radius: 0px;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 13px;
+section.contact form {
     margin-bottom: 30px;
-    letter-spacing: 0.5px;
+}
 }
 
-section.contact form textarea {
-    width: 100%;
-    height: 220px;
-    max-height: 280px;
-    min-height: 220px;
-    background-color: rgba(250,250,250,0.1);
-    border-radius: 0px;
-    border: none;
-    outline: none;
-    color: #fff;
-    font-size: 13px;
-    margin-bottom: 30px;
-    letter-spacing: 0.5px;
+section.contact form input
+ {
+  width: 100%;
+  height: 40px;
+  background-color: rgba(250,250,250,0.1);
+  border-radius: 15px; /* Adjust the curve radius as needed */
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  padding: 10px; /* Add padding to make the input area more visible */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  box-shadow: 0 0 10px rgba(255, 165, 37, 0.5); /* Add glowing effect */
 }
+section.contact form textarea{
+  width: 100%;
+  height: 220px;
+  background-color: rgba(250,250,250,0.1);
+  border-radius: 15px; /* Adjust the curve radius as needed */
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 30px;
+  letter-spacing: 0.5px;
+  padding: 10px; /* Add padding to make the input area more visible */
+  box-sizing: border-box; /* Ensure padding is included in width/height */
+  box-shadow: 0 0 10px rgba(255, 165, 37, 0.5); /* Add glowing effect */
 
+}
 section.contact form input:focus,
 section.contact form textarea:focus {
-    outline: none;
-    border: none;
-    box-shadow: none;
-    color: #fff;
-    background-color: rgba(250,250,250,0.1);
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 165, 37, 0.5); /* Adjust glowing effect on focus */
 }
 
 section.contact form::placeholder { color: #fff }
@@ -1528,18 +1567,22 @@ section.contact form textarea::placeholder { color: #fff; }
 section.contact form textarea::placeholder { color: #fff; }
 
 section.contact form button {
-    background-color: #f5a425;
-    color: #fff;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 700;
-    padding: 12px 20px;
-    display: inline-block;
-    outline: none;
-    box-shadow: none;
-    border: none;
+  background-color: #f5a425;
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  padding: 12px 20px;
+  display: inline-block;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 15px; /* Adjust the curve radius as needed */
+  box-shadow: 0 0 10px rgba(255, 165, 37, 0.5); /* Add glowing effect */
+  cursor: pointer; /* Add cursor pointer to indicate button is clickable */
 }
+
 
 /* Footer */
 
